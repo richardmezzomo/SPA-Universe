@@ -1,3 +1,5 @@
+import { homeClick, universeClick, explorerClick } from './controls.js'
+
 export class Router {
   routes = {}
 
@@ -18,6 +20,15 @@ export class Router {
   handle() {
     const { pathname } = window.location
     const route = this.routes[pathname]
+
+    if (pathname === '/') {
+      homeClick()
+    } else if (pathname === '/universe') {
+      universeClick()
+    } else if (pathname === '/explorer') {
+      explorerClick()
+    }
+
     fetch(route)
     .then(data => data.text())
     .then(html => {

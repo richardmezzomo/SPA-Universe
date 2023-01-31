@@ -9,13 +9,23 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
 </head>
-<body>
-    
-    <nav>
-      <a href="/" onclick="route()">Home</a>
-      <a href="/universe" onclick="route()">O Universo</a>
-      <a href="/explorer" onclick="route()">Exploração</a>
-    </nav>
+<body class="home">
+    <header>
+      <img class="logo" src="./assets/logo.svg" alt="logo">
+      <nav>
+        <ul>
+          <li>
+            <a class="linkHome" class="click" href="/" onclick="route()">Home</a>
+          </li>
+          <li>
+            <a class="linkUniverse" href="/universe" onclick="route()">O Universo</a>
+          </li>
+          <li>
+            <a class="linkExplorer" href="/explorer" onclick="route()">Exploração</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
 
   <div id="app"></div>
